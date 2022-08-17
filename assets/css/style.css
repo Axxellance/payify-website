@@ -1,0 +1,310 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+a{color: inherit;text-decoration: none;}
+html {
+    scroll-behavior: smooth;
+  }
+:root {
+  --brand-color: #1e3b62;
+  --brand-color2: #ff6b81;
+  --txt-dark-color: #081828;
+}
+
+body {
+  font-size: 15px;
+  color: #ffffff;
+  overflow-x: hidden;
+  background: #f5f5f5;
+  font-family: "Anek Latin", sans-serif;
+}
+
+/*==========================================*/
+/* HEADER SECTION => NavBar */
+/*==========================================*/
+header > .navBar {
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  height: 100px;
+  position: fixed;
+  transition: 0.3s;
+  align-items: center;
+  padding: 20px 100px;
+  background: var(--brand-color);
+  justify-content: space-between;
+}
+
+/*======================================*/
+header > .navBar.changeColor {
+  background: #f5f5f5;
+  box-shadow: 0px 10px 10px 5px #00000030;
+}
+
+header > .navBar.changeColor > .logo,
+header > .navBar.changeColor > .navRow li {
+  color: var(--txt-dark-color);
+}
+
+header > .navBar.changeColor > .navRow li.download {
+  color: #f5f5f5;
+  background: var(--brand-color);
+  border-color: var(--brand-color);
+}
+
+/*======================================*/
+
+header > .navBar > .logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header > .navBar > .logo > span {
+  color: var(--brand-color2);
+}
+
+header > .navBar > .navRow {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+header > .navBar > .navRow li {
+  cursor: pointer;
+  margin-left: 20px;
+}
+header > .navBar > .navRow li:hover{
+    text-decoration: underline;
+}
+
+header > .navBar > .navRow li.download {
+  height: 50px;
+  display: flex;
+  padding: 0 30px;
+  transition: 0.3s;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  border: 2px solid #fff;
+}
+
+header > .navBar > .navRow li.download:hover {
+  margin-top: -10px;
+  text-decoration: none;
+  box-shadow: 0px 10px 10px 5px #00000030;
+}
+
+/*==========================================*/
+/* HEADER SECTION => HeaderBody */
+/*==========================================*/
+header > .headerBody {
+  display: flex;
+  margin-top: 100px;
+  padding: 20px 100px;
+  align-items: center;
+  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  background: var(--brand-color);
+  justify-content: space-between;
+}
+
+header > .headerBody > .leftContainer h1 {
+  font-size: 40px;
+  font-weight: 500px;
+  margin-bottom: 50px;
+}
+
+header > .headerBody > .leftContainer > span {
+  line-height: 30px;
+}
+
+header > .headerBody > .leftContainer b {
+  color: var(--brand-color2);
+}
+
+header > .headerBody > .leftContainer div.row {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: start;
+}
+
+header > .headerBody > .leftContainer div.row button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  font-weight: bold;
+  margin-right: 20px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: var(--brand-color);
+  font-family: "Anek Latin", sans-serif;
+}
+
+header > .headerBody > .leftContainer div.row button > i {
+  margin-right: 10px;
+}
+
+header > .headerBody > .leftContainer div.row button:hover {
+  margin-top: -10px;
+  box-shadow: 0px 10px 10px 5px #00000030;
+}
+
+header > .headerBody > .rightContainer,
+header > .headerBody > .rightContainer img {
+  height: 100%;
+}
+
+/*==========================================*/
+/* BODY SECTION */
+/*==========================================*/
+section.body {
+  height: 100vh;
+}
+
+/*==========================================*/
+/* FOOTER SECTION */
+/*==========================================*/
+footer{
+    padding: 50px 100px;
+    background: var(--txt-dark-color);
+    color: rgba(255, 255, 255, 0.25);
+}
+footer > .cardRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+footer > .cardRow > div{
+    width: 250px;
+    display: flex;
+    min-width: 250px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+/*  */
+footer > .cardRow > .brandCard > h2{
+  font-size: 25px;
+  margin: 0 0 40px;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+footer > .cardRow > .brandCard > h2 span{
+    color: var(--brand-color2);
+}
+
+footer > .cardRow > .brandCard > .txt{
+    line-height: 25px;
+}
+footer > .cardRow > .brandCard > .row{
+    margin-top: 30px;
+}
+footer > .cardRow > .brandCard > .row a{
+    margin-right: 10px;
+}
+footer > .cardRow > div > b{
+    color: #f5f5f5;
+    margin: 5px 0 40px;
+}
+/*  */
+footer > .cardRow > .contactCard > div{
+    line-height: 25px;
+}
+footer > .cardRow > .contactCard > ol{
+    margin-top: 30px;
+}
+footer > .cardRow > .contactCard > ol li{
+    margin-bottom: 10px;
+}
+/*  */
+
+footer > .cardRow > .siteLinksCard > ol li{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+footer > .cardRow > .siteLinksCard > ol li:hover{
+    color: #f5f5f5;
+}
+/*  */
+footer > .cardRow > .newsLetterCard{
+    width: 300px;
+}
+footer > .cardRow > .newsLetterCard .txt{
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+footer > .cardRow > .newsLetterCard .row{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    padding-left: 10px;
+    border-radius: 5px;
+    align-items: center;
+    background: #121313;
+}
+footer > .cardRow > .newsLetterCard .row i{
+    color: #ffffff;
+    margin-right: 20px;
+}
+footer > .cardRow > .newsLetterCard .row input{
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: transparent;
+}
+footer > .cardRow > .newsLetterCard .row button{
+    height: 100%;
+    width: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #f5f5f5;
+    font-weight: 500;
+    font-family: "Anek Latin", sans-serif;
+    background: var(--brand-color2);
+}
+
+footer > .end{
+    text-align: center;
+}
+footer > .end > a{    
+    color: var(--brand-color2);
+}
+
+/*==========================================*/
+/* SCROOL TO TOP BTN */
+/*==========================================*/
+div.scrollToTop{
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    transition: 0.3s;
+    border-radius: 5px;
+    align-items: center;
+    transform: scale(0);
+    justify-content: center;
+    background: var(--brand-color);
+}
+div.scrollToTop.show{
+    transform: scale(1.0);
+}
+div.scrollToTop:hover{
+    z-index: 99;
+    bottom: 25px;
+    background: var(--brand-color2);
+    box-shadow: 0px 10px 10px 5px #00000030;
+}
